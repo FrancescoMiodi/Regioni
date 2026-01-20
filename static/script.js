@@ -10,7 +10,7 @@ function getBlockedCells(row, col) {
     const blocked = [];
 
     // riga e colonna
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 7; i++) {
         if (i !== col) blocked.push([row, i]);
         if (i !== row) blocked.push([i, col]);
     }
@@ -21,7 +21,7 @@ function getBlockedCells(row, col) {
             if (dr === 0 && dc === 0) continue;
             const r = row + dr;
             const c = col + dc;
-            if (r >= 0 && r < 6 && c >= 0 && c < 6) {
+            if (r >= 0 && r < 7 && c >= 0 && c < 7) {
                 blocked.push([r, c]);
             }
         }
