@@ -1,3 +1,13 @@
+// Mostra la GIF per 3 secondi, poi nasconde
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        const intro = document.getElementById("intro");
+        if (intro) {
+            intro.style.display = "none";
+        }
+    }, 3000); // 3000 ms = 3 secondi
+});
+
 const cells = document.querySelectorAll(".cell");
 
 function getCell(row, col) {
