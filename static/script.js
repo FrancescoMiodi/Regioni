@@ -1,3 +1,5 @@
+const cells = document.querySelectorAll(".cell");
+
 // Mostra la GIF per 3 secondi, poi nasconde
 window.addEventListener("load", () => {
     setTimeout(() => {
@@ -7,8 +9,6 @@ window.addEventListener("load", () => {
         }
     }, 3000); // 3000 ms = 3 secondi
 });
-
-const cells = document.querySelectorAll(".cell");
 
 function getCell(row, col) {
     return document.querySelector(
@@ -89,10 +89,28 @@ cells.forEach(cell => {
                 target.classList.add("blocked");
             }
         });
+
+        checkGameComplete();
     });
 });
 
+function checkGameComplete() {
+    const cells = document.querySelectorAll(".cell");
+    let complete = true;
 
+    cells.forEach(cell => {
+        if (!cell.classList.contains("active")) {
+            complete = false;
+        }
+    });
+
+    if (complete) {
+        const finale = document.getElementById("game-complete");
+        if (finale) {
+            finale.style.display = "flex";  // mostra l’immagine
+        }
+    }
+}
 
 // document.querySelectorAll(".cell").forEach(cell => {
 //     cell.addEventListener("click", async () => {

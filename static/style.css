@@ -57,7 +57,7 @@ body {
     justify-content: center;
 
     /* sfondo */
-    background-image: url('/static/bg.jpg');
+    background-image: url('/static/sfondo.jpg');
     background-size: cover;       /* riempie tutto lo schermo */
     background-position: center;  /* centra l’immagine */
     background-repeat: no-repeat; /* non ripete l’immagine */
@@ -95,6 +95,25 @@ h1 {
     transform: translate(-50%, -50%);
     display: block;
     z-index: 2;
+}
+
+#game-complete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.95); /* leggero overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    display: none; /* nascosto inizialmente */
+}
+
+#game-complete img {
+    max-width: 80%;
+    max-height: 80%;
 }
 
 .region0 { background: #FF8C42; }
