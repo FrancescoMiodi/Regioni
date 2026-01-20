@@ -95,22 +95,17 @@ cells.forEach(cell => {
 });
 
 function checkGameComplete() {
-    const cells = document.querySelectorAll(".cell");
-    let complete = true;
+    const activeCells = document.querySelectorAll(".cell.active");
 
-    cells.forEach(cell => {
-        if (!cell.classList.contains("active")) {
-            complete = false;
-        }
-    });
-
-    if (complete) {
+    // il gioco è completo quando ci sono 7 corone
+    if (activeCells.length === 7) {
         const finale = document.getElementById("game-complete");
         if (finale) {
-            finale.style.display = "flex";  // mostra l’immagine
+            finale.style.display = "flex";
         }
     }
 }
+
 
 // document.querySelectorAll(".cell").forEach(cell => {
 //     cell.addEventListener("click", async () => {

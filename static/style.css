@@ -65,17 +65,18 @@ body {
 
 h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 42px;
+    font-size: 60px;
     text-align: center;
     margin-bottom: 20px;
     color: black;
-    text-shadow: 2px 2px 0 #fff; /* ombra delicata per risaltare */
+    text-shadow: 5px 5px 0 #fff; /* ombra delicata per risaltare */
 }
 
 .cell.blocked::after {
     content: "X";
-    font-weight: bold;
-    font-size: 32px;
+    font-family: Aptos, "Segoe UI", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
     color: black;
     position: absolute;
     top: 50%;
