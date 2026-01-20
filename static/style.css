@@ -38,7 +38,7 @@
     content: "👑";
     font-size: 36px;
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
@@ -95,7 +95,7 @@ body {
 .trattoria-sign::after {
     content: "⛓";
     position: absolute;
-    top: -28px;
+    top: 0px;
     font-size: 24px;
     color: #5c1414;
 }
@@ -127,7 +127,7 @@ body {
     content: "👑";
     font-size: 36px;
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
