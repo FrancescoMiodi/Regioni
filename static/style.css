@@ -38,7 +38,7 @@
     content: "👑";
     font-size: 36px;
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
@@ -63,13 +63,49 @@ body {
     background-repeat: no-repeat; /* non ripete l’immagine */
 }
 
-h1 {
+/* h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 60px;
+    font-size: 80px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: black;
-    text-shadow: 5px 5px 0 #fff; /* ombra delicata per risaltare */
+    text-shadow: 5px 5px 0 #fff;
+} */
+
+.trattoria-sign {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #7a1c1c; /* rosso trattoria */
+
+    background: #fff8e7; /* avorio caldo */
+    padding: 18px 40px;
+    border: 4px solid #7a1c1c;
+    border-radius: 12px;
+
+    box-shadow:
+        0 6px 0 #5c1414,
+        0 12px 20px rgba(0, 0, 0, 0.35);
+
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.trattoria-sign::before,
+.trattoria-sign::after {
+    content: "⛓";
+    position: absolute;
+    top: -28px;
+    font-size: 24px;
+    color: #5c1414;
+}
+
+.trattoria-sign::before {
+    left: 20px;
+}
+
+.trattoria-sign::after {
+    right: 20px;
 }
 
 .cell.blocked::after {
@@ -91,7 +127,7 @@ h1 {
     content: "👑";
     font-size: 36px;
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
@@ -115,6 +151,32 @@ h1 {
 #game-complete img {
     max-width: 80%;
     max-height: 80%;
+}
+
+.victory-text {
+    position: absolute;
+    top: 15%;
+    font-size: 64px;
+    font-family: 'Great Vibes', cursive;
+    color: #000000;
+    opacity: 0;
+    animation: textAppear 1.2s ease-out forwards;
+}
+
+/* animazione scritta */
+@keyframes textAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.8);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(5px) scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .region0 { background: #FF8C42; }
