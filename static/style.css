@@ -37,21 +37,32 @@ body {
     align-items: center;
 }
 
-h1 {
+/* h1 {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 36px;
     text-align: center;
     margin-bottom: 20px;
-}
+} */
 
-/* h1 {
+h1 {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 38px;
     text-align: center;
     margin-bottom: 20px;
     color: #d6336c;          
     text-shadow: 2px 2px 0 #fff;
-} */
+}
+
+.cell.blocked::after {
+    content: "❌";
+    font-size: 32px;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
 
 .region0 { background: #FF8C42; }
 .region1 { background: #FFFFFF; }
