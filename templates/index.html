@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Gioco Regioni</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Gioco delle Regioni</h1>
+
+<div id="grid">
+    {% for r in range(7) %}
+        {% for c in range(7) %}
+            <div class="cell region{{ regions[r][c] }}"
+                 data-row="{{ r }}" data-col="{{ c }}">
+            </div>
+        {% endfor %}
+    {% endfor %}
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

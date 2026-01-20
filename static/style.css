@@ -1,0 +1,38 @@
+#grid {
+    display: grid;
+    grid-template-columns: repeat(7, 70px);
+    grid-template-rows: repeat(7, 70px);
+    gap: 2px;
+}
+
+.cell {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #333;
+    cursor: pointer;
+    position: relative;
+}
+
+.cell::after {
+    content: "";
+    width: 35px;
+    height: 35px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: none;
+}
+
+.cell.active::after {
+    display: block;
+}
+
+.region0 { background: #ffdede; }
+.region1 { background: #deffde; }
+.region2 { background: #dedeff; }
+.region3 { background: #fff0de; }
+.region4 { background: #f0deff; }
+.region5 { background: #deffff; }
+.region6 { background: #ffffff; }
