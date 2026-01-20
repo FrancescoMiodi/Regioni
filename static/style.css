@@ -7,12 +7,13 @@
 }
 
 .cell {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border: 3px solid #333;
     cursor: pointer;
     position: relative;
     box-sizing: border-box;
+    font-size: 0; /* previene che il contenuto testo interno influisca */
 }
 
 .cell::after {
@@ -37,13 +38,6 @@ body {
     align-items: center;
 }
 
-/* h1 {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 20px;
-} */
-
 h1 {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 38px;
@@ -65,12 +59,27 @@ h1 {
 }
 
 .cell.active::after {
+    content: "❤️";
+    font-size: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: block;
-    z-index: 2;
+    z-index: 2; /* cuore sopra X */
 }
 
 .cell.blocked::after {
-    z-index: 1;
+    content: "❌";
+    font-size: 32px;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    pointer-events: none;
+    z-index: 1; /* X sotto il cuore */
 }
 
 .region0 { background: #FF8C42; }
