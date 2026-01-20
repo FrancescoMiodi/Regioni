@@ -64,6 +64,15 @@ h1 {
     pointer-events: none;
 }
 
+.cell.active::after {
+    display: block;
+    z-index: 2;
+}
+
+.cell.blocked::after {
+    z-index: 1;
+}
+
 .region0 { background: #FF8C42; }
 .region1 { background: #FFFFFF; }
 .region2 { background: #3454D1; }
