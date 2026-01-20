@@ -17,8 +17,8 @@
 }
 
 .cell::after {
-    content: "❤️";
-    font-size: 32px;
+    content: "👑";
+    font-size: 36px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,41 +36,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
+    /* sfondo */
+    background-image: url('/static/bg.jpg');
+    background-size: cover;       /* riempie tutto lo schermo */
+    background-position: center;  /* centra l’immagine */
+    background-repeat: no-repeat; /* non ripete l’immagine */
 }
 
 h1 {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-    font-size: 38px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
     text-align: center;
     margin-bottom: 20px;
-    color: #000000;          
-    text-shadow: 2px 2px 0 #fff;
-}
-
-.cell.blocked::after {
-    content: "❌";
-    font-size: 32px;
     color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
-
-.cell.active::after {
-    content: "❤️";
-    font-size: 32px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    z-index: 2;
+    text-shadow: 2px 2px 0 #fff; /* ombra delicata per risaltare */
 }
 
 .cell.blocked::after {
-    content: "❌";
+    content: "X";
+    font-weight: bold;
     font-size: 32px;
     color: black;
     position: absolute;
@@ -80,6 +66,17 @@ h1 {
     display: block;
     pointer-events: none;
     z-index: 3;
+}
+
+.cell.active::after {
+    content: "👑";
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 2;
 }
 
 .region0 { background: #FF8C42; }
