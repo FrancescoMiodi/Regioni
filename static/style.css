@@ -43,7 +43,7 @@ h1 {
     font-size: 38px;
     text-align: center;
     margin-bottom: 20px;
-    color: #d6336c;          
+    color: #000000;          
     text-shadow: 2px 2px 0 #fff;
 }
 
@@ -66,7 +66,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
-    z-index: 2; /* cuore sopra X */
+    z-index: 2;
 }
 
 .cell.blocked::after {
@@ -79,7 +79,7 @@ h1 {
     transform: translate(-50%, -50%);
     display: block;
     pointer-events: none;
-    z-index: 1; /* X sotto il cuore */
+    z-index: 3;
 }
 
 .region0 { background: #FF8C42; }
