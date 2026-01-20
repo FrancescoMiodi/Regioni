@@ -91,23 +91,6 @@ body {
     position: relative;
 }
 
-.trattoria-sign::before,
-.trattoria-sign::after {
-    content: "⛓";
-    position: absolute;
-    top: 0px;
-    font-size: 24px;
-    color: #5c1414;
-}
-
-.trattoria-sign::before {
-    left: 20px;
-}
-
-.trattoria-sign::after {
-    right: 20px;
-}
-
 .cell.blocked::after {
     content: "X";
     font-family: Aptos, "Segoe UI", Arial, sans-serif;
