@@ -36,10 +36,10 @@ body {
     align-items: center;
 }
 
-.region0 { background: #ffdede; }
-.region1 { background: #deffde; }
-.region2 { background: #dedeff; }
-.region3 { background: #fff0de; }
-.region4 { background: #f0deff; }
-.region5 { background: #deffff; }
-.region6 { background: #ffffff; }
+.region0 { background: #FF8C00; }
+.region1 { background: #FFFF00; }
+.region2 { background: #007FFF; }
+.region3 { background: #ff007f; }
+.region4 { background: #32CD32; }
+.region5 { background: #FF0000; }
+.region6 { background: #A020F0; }
